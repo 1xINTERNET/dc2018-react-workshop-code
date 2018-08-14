@@ -13,7 +13,7 @@ The subject of the workshop is how to implement a simple decoupled Drupal conten
 
 ## For backend development
 
-1. _docker_
+1. _docker_
 2. _docker-composer_ on Linux machines
 
 # Getting started (with app development)
