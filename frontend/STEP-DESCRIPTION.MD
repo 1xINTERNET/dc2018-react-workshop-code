@@ -1,22 +1,12 @@
-# Step 2
+# Step 3
 
-We will look at all the things `create-react-app` generated for us (For the full CRA documentation, take a look at the `README.md` file)
+During this workshop we want to create a decoupled news app to read Article nodes from a Drupal backend.
 
-1. App code is in `./src`
+![component hierarchy wireframe](./component-wireframe.svg)
 
-   1. `./src/index.js` is the entry point. Here we mount the root React component `<App>`
-   2. `./src/App.js` is where the root component is defined.
-   3. Ignore: `./src/registerServiceWorker.js`
+We will create two routes which map to two components:
 
-2. Other meta information and templates for the app are in `./public`
+1. On the route `/` we will just show the article list (`<ArticleList />`)
+2. On the route `article/$ID` we will also render the full article (`<ArticleDetail />`)<sup>[1](#1)</sup>
 
-   1. `./public/favicon.ico` The app icon
-   2. `./public/index.html` The template for the generated app HTML entry file
-   3. `./public/manifest.json` Meta information for browsers to recognise this as an app.
-
-3. `./package.json` This contains the meta information for our app project. More importantly CRA has added some scripts which we can use:
-
-   1. `yarn start` – Start the development server and open a browser at `localhost:3000`
-   2. `yarn build` – Build the whole app as an optimised bundle which can be used in production
-
-4. `./build` This is only visible once we run `yarn build` – It is the optimised and production ready App.
+<a name="1">1</a>: As you can see from the wireframe we want to show the list of articles even on the article detail view so they are navigable without using the back button or an extra menu.
