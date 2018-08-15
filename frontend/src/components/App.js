@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BrowserRouter, Route } from "react-router-dom";
 
 import ArticleList from "./ArticleList";
 import ArticleDetail from "./ArticleDetail";
@@ -6,10 +7,12 @@ import ArticleDetail from "./ArticleDetail";
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <ArticleList />
-        <ArticleDetail id="1" />
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Route path="/" component={ArticleList} />
+          <Route path="/article/:id" component={ArticleDetail} />
+        </div>
+      </BrowserRouter>
     );
   }
 }
