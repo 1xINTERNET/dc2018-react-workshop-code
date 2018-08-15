@@ -1,12 +1,16 @@
-# Step 3
+# Step 4
 
-During this workshop we want to create a decoupled news app to read article nodes from a Drupal backend.
+We will create two new directories to seperate components and other JS files.
 
-![component hierarchy wireframe](./component-wireframe.svg)
+This is just to keep things a little more ordered.
 
-We will create two routes:
+This looks like this:
 
-1. On the route `/` we will just show the article list (`<ArticleList />`)
-2. On the route `article/$ID` we will also render the full article (`<ArticleDetail />`)<sup>[1](#1)</sup>
-
-<a name="1">1</a>: As you can see from the wireframe we want to show the list of articles even on the article detail view so they are navigable without using the back button or an extra menu.
+```
+src/
+├───components/
+│   └───App.js
+├───utils/
+│   └───registerServiceWorker.js
+└───index.js
+```
