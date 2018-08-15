@@ -1,11 +1,8 @@
-# Step 6
+# Step 7
 
-- Install `react-router-dom` module
+- Install Apollo graphql library and related dependencies: `yarn add apollo-boost react-apollo graphql-tag graphql --dev`
 
-- Add `<BrowserRouter />` parent component and `<Route />` for each path to the `<App />` component.
+- Create a file in `./src/utils/apolloClient.js` which creates an `ApolloClient` instance and exports it.
 
-  - `<ArticleList />` will render on `/` and any path below that. We could have just rendered it outside of a `<Route />` but we may want to add a more specific route later on.
-
-  - `<ArticleDetail />` will render on `/article/:id` routes. The `:id` will be the node ID.
-    - In order for it to pick up this parameter properly we need to adjust the parameter destructuring in the component definition. (we now actually want `match.params.id`, not only `id`)
-    - We also adjust the `propType` definition to adjust to this new property structure.
+- Add the `<ApolloProvider />` as a wrapper to our `<App />` root component in `./src/index.js`and pass the `ApolloClient` instance to it.
+  - This Provider exposes the Apollo functionality to components anywhere in our component tree.
