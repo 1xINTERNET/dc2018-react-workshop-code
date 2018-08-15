@@ -1,16 +1,10 @@
-# Step 4
+# Step 5
 
-We will create two new directories to seperate components and other JS files.
+- Create two components:
 
-This is just to keep things a little more ordered.
+  - `./src/ArticleDetail` (receives the node ID of the article as a prop)
+  - `./src/ArticleList`
 
-This looks like this:
+- Install the `prop-types` module which we use to enable prop type validation on the `<ArticleDetail />` component.
 
-```
-src/
-├───components/
-│   └───App.js
-├───utils/
-│   └───registerServiceWorker.js
-└───index.js
-```
+- Include both new components in the `<App />` component. (At this point we just pass a static node ID to the `<ArticleDetail />`)
