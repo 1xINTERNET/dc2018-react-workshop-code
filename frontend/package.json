@@ -17,7 +17,11 @@
     "apiBase": "http://dc2018-react-backend.docker.localhost"
   },
   "devDependencies": {
+    "apollo-boost": "^0.1.13",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.2",
     "prop-types": "^15.6.2",
+    "react-apollo": "^2.1.11",
     "react-router-dom": "^4.3.1"
   }
 }
