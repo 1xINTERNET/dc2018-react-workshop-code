@@ -2,8 +2,6 @@ import React from "react";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
 
-import ArticleTeaser from "./ArticleTeaser";
-
 const GET_ARTICLES = gql`
   {
     # This is a query exposed by the Drupal graphql module
@@ -40,6 +38,7 @@ const ArticleList = () => {
       {({ loading, error, data }) => {
         if (loading) return "Loading...";
         if (error) return `Error! ${error.message}`;
+        // The actual entities are in data.nodeQuery.entities
         const {
           nodeQuery: { entities }
         } = data;
