@@ -2,6 +2,8 @@ import React from "react";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
 
+import ArticleTeaser from "./ArticleTeaser";
+
 const GET_ARTICLES = gql`
   {
     # This is a query exposed by the Drupal graphql module
@@ -42,8 +44,13 @@ const ArticleList = () => {
         const {
           nodeQuery: { entities }
         } = data;
-        console.log(entities);
-        return <div className="ArticleList">I am an ArticleList!</div>;
+        return (
+          <div className="ArticleList">
+            {entities.map(entity => (
+              <ArticleTeaser key={entity.entityId} {...entity} />
+            ))}
+          </div>
+        );
       }}
     </Query>
   );

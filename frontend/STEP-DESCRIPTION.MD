@@ -1,3 +1,5 @@
-# Step 8
+# Step 9
 
-- Add the graphql query for the list of articles to the `ArticleList` component using the `Query` component of the Apollo graphql client library.
+- Add an `ArticleTeaser` component which renders the fields of the article nodes we query in `ArticleList`
+
+- Render an `ArticleTeaser` component for each article node received in `ArticleList`
