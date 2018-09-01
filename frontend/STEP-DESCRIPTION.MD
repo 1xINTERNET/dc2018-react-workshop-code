@@ -1,5 +1,3 @@
-# Step 9
+# Step 10
 
-- Add an `ArticleTeaser` component which renders the fields of the article nodes we query in `ArticleList`
-
-- Render an `ArticleTeaser` component for each article node received in `ArticleList`
+- Use the `Link` component of `react-router-dom` to link to the path `/article/$articleID` in `ArticleTeaser`

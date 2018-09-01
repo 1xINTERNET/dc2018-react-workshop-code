@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const ArticleTeaser = ({
   entityId,
@@ -10,7 +11,7 @@ const ArticleTeaser = ({
   body: { summaryProcessed }
 }) => {
   return (
-    <div className="ArticleTeaser">
+    <Link to={`/article/${entityId}`} className="ArticleTeaser">
       <div className="ArticleTeaser__image-wrapper">
         <img
           className="ArticleTeaser__image"
@@ -24,7 +25,7 @@ const ArticleTeaser = ({
         <h3 className="ArticleTeaser__title">{title}</h3>
         <div className="ArticleTeaser__body">{summaryProcessed}</div>
       </div>
-    </div>
+    </Link>
   );
 };
 
