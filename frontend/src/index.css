@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --textColor: rgb(56, 56, 56);
+  --bodyBg: rgb(252, 252, 252);
+  --borderColor: rgb(231, 230, 230);
+  --fontFamily: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+body {
+  color: var(--textColor);
+  background-color: var(--bodyBg);
+  font-family: var(--fontFamily);
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+.Root {
+  flex: 1;
+  display: flex;
+}
+
+/* App */
+.App {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+/* ArticleList */
+.ArticleList {
+  flex: 1;
+}
+
+/* ArticleDetail */
+.ArticleDetail {
+  flex: 1;
+  border-left: 1px solid var(--borderColor);
+}
