@@ -26,7 +26,7 @@ const GET_ARTICLES = gql`
             url
           }
           body {
-            processed
+            summaryProcessed
           }
         }
       }
