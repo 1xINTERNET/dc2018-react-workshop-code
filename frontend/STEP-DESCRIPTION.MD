@@ -1,3 +1,3 @@
-# Step 13
+# Step 14
 
-- Add a close button to the `ArticleDetail`. It is just a `react-router` `Link` which points to `/`.
+- Refactor the loading element into a seperate React component so we can reuse it.
