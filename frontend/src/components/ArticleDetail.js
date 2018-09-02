@@ -2,6 +2,7 @@ import React from "react";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const GET_ARTICLE = gql`
   # Wrap the actual query so we can call it with a variable from the props.
@@ -32,6 +33,9 @@ const ArticleDetail = ({
 }) => {
   return (
     <div className="ArticleDetail">
+      <Link to="/" className="ArticleDetail__close" aria-label="Close">
+        ⮃
+      </Link>
       {/* variables are exposed to the graphql query prefixed with a $ sign. */}
       <Query query={GET_ARTICLE} variables={{ id }}>
         {({ loading, error, data }) => {

@@ -1,3 +1,3 @@
-# Step 12
+# Step 13
 
-- Properly render the article data received in the `ArticleDetail` component.
+- Add a close button to the `ArticleDetail`. It is just a `react-router` `Link` which points to `/`.
