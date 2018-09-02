@@ -38,9 +38,30 @@ const ArticleDetail = ({
           if (loading) return "Loading...";
           if (error) return `Error! ${error.message}`;
           // The actual entities are in data.nodeById
-          const { nodeById } = data;
-          console.log(nodeById);
-          return <div>I am an ArticleDetail! My ID is {id}</div>;
+          const {
+            nodeById: {
+              title,
+              fieldImage: { url, alt, width, height },
+              body: { processed }
+            }
+          } = data;
+          return (
+            <div className="ArticleDetail__content-wrapper">
+              <img
+                className="ArticleDetail__image"
+                src={url}
+                alt={alt}
+                width={width}
+                height={height}
+              />
+              <h2 className="ArticleDetail__title">{title}</h2>
+              {/* Using dangerouslySetInnerHTML allows for XSS attacks. Avoid this in production. */}
+              <div
+                className="ArticleDetail__body"
+                dangerouslySetInnerHTML={{ __html: processed }}
+              />
+            </div>
+          );
         }}
       </Query>
     </div>
