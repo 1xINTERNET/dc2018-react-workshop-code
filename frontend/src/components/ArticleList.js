@@ -3,6 +3,7 @@ import gql from "graphql-tag";
 import { Query } from "react-apollo";
 
 import ArticleTeaser from "./ArticleTeaser";
+import Loading from "./Loading";
 
 const GET_ARTICLES = gql`
   {
@@ -36,23 +37,21 @@ const GET_ARTICLES = gql`
 
 const ArticleList = () => {
   return (
-    <Query query={GET_ARTICLES}>
-      {({ loading, error, data }) => {
-        if (loading) return "Loading...";
-        if (error) return `Error! ${error.message}`;
-        // The actual entities are in data.nodeQuery.entities
-        const {
-          nodeQuery: { entities }
-        } = data;
-        return (
-          <div className="ArticleList">
-            {entities.map(entity => (
-              <ArticleTeaser key={entity.entityId} {...entity} />
-            ))}
-          </div>
-        );
-      }}
-    </Query>
+    <div className="ArticleList">
+      <Query query={GET_ARTICLES}>
+        {({ loading, error, data }) => {
+          if (loading) return <Loading />;
+          if (error) return `Error! ${error.message}`;
+          // The actual entities are in data.nodeQuery.entities
+          const {
+            nodeQuery: { entities }
+          } = data;
+          return entities.map(entity => (
+            <ArticleTeaser key={entity.entityId} {...entity} />
+          ));
+        }}
+      </Query>
+    </div>
   );
 };
 
