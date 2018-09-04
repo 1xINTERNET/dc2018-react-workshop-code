@@ -34,18 +34,20 @@ const GET_ARTICLES = gql`
 
 const ArticleList = () => {
   return (
-    <Query query={GET_ARTICLES}>
-      {({ loading, error, data }) => {
-        if (loading) return "Loading...";
-        if (error) return `Error! ${error.message}`;
-        // The actual entities are in data.nodeQuery.entities
-        const {
-          nodeQuery: { entities }
-        } = data;
-        console.log(entities);
-        return <div className="ArticleList">I am an ArticleList!</div>;
-      }}
-    </Query>
+    <div className="ArticleList">
+      <Query query={GET_ARTICLES}>
+        {({ loading, error, data }) => {
+          if (loading) return "Loading...";
+          if (error) return `Error! ${error.message}`;
+          // The actual entities are in data.nodeQuery.entities
+          const {
+            nodeQuery: { entities }
+          } = data;
+          console.log(entities);
+          return "I am an ArticleList!";
+        }}
+      </Query>
+    </div>
   );
 };
 
