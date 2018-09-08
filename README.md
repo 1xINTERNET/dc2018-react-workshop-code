@@ -24,12 +24,11 @@ To work on the app code you need to have the following dependencies installed:
    ```bash
    $ yarn
    ```
-3. Customise the API base URL (`config.apiBase`) in `./frontend/package.json`. By default it points to the locally hosted backend. (See below how to get that working)
-4. Start development server:
+3. Start development server:
    ```bash
    $ yarn start
    ```
-5. You can access the served app code by pointing your browser to [http://localhost:3000](http://localhost:3000)
+4. You can access the served app code by pointing your browser to [http://localhost:3000](http://localhost:3000)
 
 # Backend development/Hosting the backend locally
 
