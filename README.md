@@ -18,8 +18,6 @@ The subject of the workshop is how to implement a simple decoupled Drupal conten
 
 # Getting started (with app development)
 
-(For instructions for the backend, look into `./backend/README.md`)
-
 1. Go into the `./frontend` directory:
    ```bash
    $ cd frontend
@@ -32,4 +30,8 @@ The subject of the workshop is how to implement a simple decoupled Drupal conten
    ```bash
    $ yarn start
    ```
-4. In your browser open: `http://localhost:3000`
+4. You can access the served app code by pointing your browser to [http://localhost:3000](http://localhost:3000)
+
+# Backend development/Hosting the backend locally
+
+This is not needed for the workshop as we will use a hosted backend. If you want to install it locally, follow the steps described in `./backend/README.md`.
