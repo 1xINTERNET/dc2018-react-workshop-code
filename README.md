@@ -1,22 +1,20 @@
-# DrupalCon Europe 2018: React workshop code
+# Drupal Europe 2018: React workshop code
 
 This repository contains the complete code for the workshop _"Using React with Drupal. The Basics."_ (Working title)
 
 The subject of the workshop is how to implement a simple decoupled Drupal content viewing app. As such the workshop itself will mainly deal with the frontend aspects (within the `./frontend` directory). For those interested the backend used is also included in the `./backend` directory. (See `./backend/README.md` for more information)
 
-# Requirements
+# App development
 
-## For app/frontend development
+The frontend is built using `create-react-app` for scaffolding. You can read the comprehensive documentation at `./frontend/README.md`.
 
-1. _nodejs_ of at least version 8
-2. _yarn_ package manager (if it is missing: `npm i yarn -g`)
+To work on the app code you need to have the following dependencies installed:
 
-## For backend development
+- `git`
+- `nodejs` of at least version 8
+- `yarn` package manager (if it is missing: `npm i yarn -g`)
 
-1. _docker_
-2. _docker-composer_ on Linux machines
-
-# Getting started (with app development)
+## Getting started
 
 1. Go into the `./frontend` directory:
    ```bash
@@ -26,11 +24,12 @@ The subject of the workshop is how to implement a simple decoupled Drupal conten
    ```bash
    $ yarn
    ```
-3. Start development server:
+3. Customise the API base URL (`config.apiBase`) in `./frontend/package.json`. By default it points to the locally hosted backend. (See below how to get that working)
+4. Start development server:
    ```bash
    $ yarn start
    ```
-4. You can access the served app code by pointing your browser to [http://localhost:3000](http://localhost:3000)
+5. You can access the served app code by pointing your browser to [http://localhost:3000](http://localhost:3000)
 
 # Backend development/Hosting the backend locally
 
