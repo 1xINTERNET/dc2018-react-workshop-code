@@ -30,7 +30,7 @@ You need to have the following dependencies installed:
    ```bash
    $ docker-compose exec php drush cr -r /var/www/html/htdocs/web
    ```
-5. You can access the backend by pointing your browser to [http://dc2018-react-backend.docker.localhost/](http://dc2018-react-backend.docker.localhost/)
+5. You can access the backend by pointing your browser to [http://dc2018-react-backend.docker.localhost/](http://dc2018-react-backend.docker.localhost/) – The login details are: `admin`/`admin123`
 
 6. Point the app to use the local backend by changing the property `apiBase` in `package.json` to the above URL.
 
