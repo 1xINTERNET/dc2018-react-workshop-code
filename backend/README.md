@@ -20,7 +20,7 @@ You need to have the following dependencies installed:
    ```
 2. Install backend dependencies:
    ```bash
-   $ cd htdocs && composer install && cd ..
+   $ cd htdocs && composer install --ignore-platform-reqs && cd ..
    ```
 3. Start local development server (You will probably have to wait a minute, because importing the database can take a while. Before this is complete you will see an `The website encountered an unexpected error. Please try again later.` error.):
    ```bash
