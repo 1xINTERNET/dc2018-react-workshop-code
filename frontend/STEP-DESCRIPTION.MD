@@ -1,5 +1,7 @@
 # Step 3
 
+No code changes in this step, only an explanation:
+
 During this workshop we want to create a decoupled news app to read article nodes from a Drupal backend.
 
 ![component hierarchy wireframe](./component-wireframe.svg)
