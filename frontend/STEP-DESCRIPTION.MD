@@ -6,3 +6,5 @@
 
 - Add the `<ApolloProvider />` as a wrapper to our `<App />` root component in `./src/index.js`and pass the `ApolloClient` instance to it.
   - This Provider exposes the Apollo functionality to components anywhere in our component tree.
+
+Further reading: [The Apollo docs](https://www.apollographql.com/docs/react/essentials/get-started.html)
