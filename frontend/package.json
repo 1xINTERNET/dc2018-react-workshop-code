@@ -15,6 +15,6 @@
   },
   "config": {
     "// apiBase for local development": "http://dc2018-react-backend.docker.localhost",
-    "apiBase": "http://dev.vm231.hosting.1xinternet.de"
+    "apiBase": "http://react-training.1xinternet.de/"
   }
 }
