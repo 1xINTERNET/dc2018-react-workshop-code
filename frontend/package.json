@@ -15,7 +15,7 @@
   },
   "config": {
     "// apiBase for local development": "http://dc2018-react-backend.docker.localhost",
-    "apiBase": "http://react-training.1xinternet.de/"
+    "apiBase": "http://react-training.1xinternet.de"
   },
   "devDependencies": {
     "apollo-boost": "^0.1.13",
